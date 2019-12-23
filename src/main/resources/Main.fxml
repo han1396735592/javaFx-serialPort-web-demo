@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="root"
+      fx:controller="cn.qqhxj.fx.demo.controller.MainController">
+    <children>
+        <fx:include source="header.fxml" fx:id="header"></fx:include>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <WebView fx:id="webView" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="root" prefHeight="280.0" prefWidth="400.0" stylesheets="setting.css"
+      xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cn.qqhxj.fx.demo.controller.SettingController">
+    <children>
+        <Pane prefHeight="240.0" prefWidth="200.0">
+            <children>
+                <GridPane prefHeight="180.0" prefWidth="240.0" stylesheets="setting.css">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="77.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0"
+                                           prefWidth="180.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+                        <RowConstraints/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="串口"/>
+                        <ComboBox fx:id="portName" layoutX="0" layoutY="0" prefHeight="40.0" prefWidth="120.0"
+                                  GridPane.columnIndex="1">
+                        </ComboBox>
+                        <Label text="波特率" GridPane.rowIndex="1"/>
+                        <ComboBox fx:id="baudRate" prefHeight="40.0" prefWidth="120.0" GridPane.columnIndex="1"
+                                  GridPane.rowIndex="1"/>
+
+                        <Label text="停止位" GridPane.rowIndex="2"/>
+                        <ComboBox prefHeight="40.0" prefWidth="120.0" GridPane.columnIndex="1"
+                                  GridPane.rowIndex="2"/>
+                    </children>
+                </GridPane>
+                <ToggleButton fx:id="btn" layoutX="100.0" layoutY="200.0" mnemonicParsing="false"
+                              onAction="#connect" prefHeight="40.0" prefWidth="100.0" text="连接"/>
+            </children>
+        </Pane>
+        <VBox prefHeight="240.0" prefWidth="200.0">
+            <TextArea fx:id="textArea" prefHeight="100.0" prefWidth="200.0"/>
+            <TextArea fx:id="sendText" prefHeight="100.0" prefWidth="200.0"/>
+            <HBox>
+                <Button onAction="#clear" prefHeight="40.0" prefWidth="100.0" text="清除接受"/>
+                <Button onAction="#send" prefHeight="40.0" prefWidth="100.0" text="发送数据"/>
+            </HBox>
+        </VBox>
+    </children>
+</HBox>

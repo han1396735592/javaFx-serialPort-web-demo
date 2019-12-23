@@ -1,0 +1,6 @@
+.label {
+    -fx-font-size: 20;
+    -fx-text-fill: #333333;
+    -fx-text-origin: top;
+    -fx-text-alignment: right;
+}
