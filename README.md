@@ -32,5 +32,5 @@
 </dependency>
 ```
 ## 效果
-![mnain](imgs/main.png)
+![main](imgs/main.png)
 ![setting](imgs/setting.png)
